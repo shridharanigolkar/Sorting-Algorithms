@@ -14,13 +14,27 @@ class BubbleSort {
             }
         }
     }
+      static void bubbleSortUsingRecursion(int[] arr, int n) {
+        // Base case
+        if (n == 1) return;
+
+        // One pass of bubble sort
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                swap(i, i + 1, arr);
+            }
+        }
+
+        // Recursively call bubbleSort for remaining array
+         bubbleSortUsingRecursion(arr, n - 1);
+    }
 
     public static void main(String[] args) {
         int[] arr = {5, 4, 3, 2, 1};
 
         BubbleSort obj = new BubbleSort();
         obj.bubble(arr);
-
+  
         System.out.println(java.util.Arrays.toString(arr));
     }
 }
