@@ -1,0 +1,23 @@
+# Ignore Windows executables
+*.exe
+
+# Ignore object files
+*.o
+
+# Ignore static and dynamic libraries
+*.a
+*.lib
+*.so
+*.dll
+
+# Ignore build directories
+/build/
+/bin/
+/obj/
+
+# Ignore debug symbol files
+*.pdb
+*.idb
+
+# Ignore macOS clutter (if collaborating cross-platform)
+.DS_Store
